@@ -15,6 +15,15 @@ lazy val root = project
     version := "0.1.0",
 
     scalaVersion := scala3Version,
+
+    scalacOptions ++= Seq(
+      "-feature",
+      "-unchecked",
+      "-deprecation",
+      // http://dotty.epfl.ch/docs/reference/other-new-features/explicit-nulls.html
+      //"-Yexplicit-nulls",
+    ),
+
     libraryDependencies ++= Seq(
       /*
        * Cats Libs
@@ -64,7 +73,7 @@ lazy val root = project
        */
       // monocle
       // https://www.optics.dev/Monocle/
-      "dev.optics" %% "monocle-core"  % "3.0.0",
+      "dev.optics" %% "monocle-core" % "3.0.0",
 
       // Monix: Asynchronous Programming for Scala and Scala.js.
       // https://monix.io/
