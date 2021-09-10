@@ -1,12 +1,12 @@
-val scala3Version = "3.1.0-RC1"
+val scala3Version = "3.1.0-RC3"
 
 val catsVersion = "2.6.1"
-val catsEffectVersion = "3.1.1"
+val catsEffectVersion = "3.2.9"
 val catsMtlVersion = "1.2.0"
-val shapeless3Version = "3.0.1"
-val zioVersion = "1.0.9"
-val fs2Version = "3.0.6"
-val http4sVersion = "1.0.0-M23"
+val shapeless3Version = "3.0.3"
+val zioVersion = "1.0.12"
+val fs2Version = "3.1.4"
+val http4sVersion = "1.0.0-M27"
 
 lazy val root = project
   .in(file("."))
@@ -73,7 +73,7 @@ lazy val root = project
        */
       // monocle
       // https://www.optics.dev/Monocle/
-      "dev.optics" %% "monocle-core" % "3.0.0",
+      "dev.optics" %% "monocle-core" % "3.1.0",
 
       // Monix: Asynchronous Programming for Scala and Scala.js.
       // https://monix.io/
@@ -106,12 +106,12 @@ lazy val root = project
 
       // Cats STM: Software transactional memory for Cats Effect
       // https://timwspence.github.io/cats-stm/
-      "io.github.timwspence" %% "cats-stm" % "0.10.3",
+      "io.github.timwspence" %% "cats-stm" % "0.11.0",
 
       /*
        * test libs
        */
-      "org.scalatest" %% "scalatest" % "3.2.9" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.10" % Test,
       "org.scalacheck" %% "scalacheck" % "1.15.4" % Test,
       "com.novocode" % "junit-interface" % "0.11" % Test,
     )
