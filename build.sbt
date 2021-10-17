@@ -11,8 +11,8 @@ val http4sVersion = "1.0.0-M27"
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "cats-playground",
-    version := "0.1.0",
+    name := "scala-playground",
+    version := "0.1.0-SNAPSHOT",
 
     scalaVersion := scala3Version,
 
