@@ -1,12 +1,12 @@
-val scala3Version = "3.1.0-RC3"
+val scala3Version = "3.1.1-RC1"
 
 val catsVersion = "2.6.1"
 val catsEffectVersion = "3.2.9"
 val catsMtlVersion = "1.2.0"
 val shapeless3Version = "3.0.3"
 val zioVersion = "1.0.12"
-val fs2Version = "3.1.4"
-val http4sVersion = "1.0.0-M27"
+val fs2Version = "3.1.6"
+val http4sVersion = "1.0.0-M29"
 
 lazy val root = project
   .in(file("."))
@@ -44,7 +44,7 @@ lazy val root = project
       "org.typelevel" %% "cats-effect-kernel" % catsEffectVersion,
       "org.typelevel" %% "cats-effect-laws" % catsEffectVersion % Test,
       "org.typelevel" %% "cats-effect-std" % catsEffectVersion,
-      "org.typelevel" %% "cats-effect" % catsEffectVersion % Test,
+      "org.typelevel" %% "cats-effect" % catsEffectVersion,
       "org.typelevel" %% "cats-effect-testkit" % catsEffectVersion % Test,
       // cats-mtl
       // https://github.com/typelevel/cats-mtl
@@ -52,7 +52,7 @@ lazy val root = project
       // "org.typelevel" %% "cats-mtl-laws" % catsMtlVersion % Test,
       // mouse
       // https://github.com/typelevel/mouse
-      // "org.typelevel" %% "mouse" % "1.0.2",
+      "org.typelevel" %% "mouse" % "1.0.6",
       // cats-testkit-scalatest
       // https://github.com/typelevel/cats-testkit-scalatest
       "org.typelevel" %% "cats-testkit-scalatest" % "2.1.5" % Test,
@@ -63,10 +63,10 @@ lazy val root = project
       "org.typelevel" %% "shapeless3-typeable" % shapeless3Version,
       // Spire: Numerics library
       // https://github.com/typelevel/spire
-      // "org.typelevel" %% "spire" % "0.17.0",
+      "org.typelevel" %% "spire" % "0.18.0-M1",
       // squants: The Scala API for Quantities, Units of Measure and Dimensional Analysis
       // https://github.com/typelevel/squants
-      // "org.typelevel" %% "squants" % "1.8.0",
+      "org.typelevel" %% "squants" % "1.8.3",
 
       /*
        * other cat related cool libs
