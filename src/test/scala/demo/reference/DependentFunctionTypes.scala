@@ -10,7 +10,7 @@ import scala.util.chaining.*
 
 
 trait Entry {
-  type Key;
+  type Key
   val key: Key
 }
 
@@ -31,7 +31,7 @@ class Entry2 extends Entry {
 }
 
 
-@main def DependentFunctionTypes: Unit =
+@main def DependentFunctionTypes(): Unit =
   val entry1 = new Entry {
     override type Key = String
     override val key = "hello"

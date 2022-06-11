@@ -42,6 +42,6 @@ def combineAll2[T: Monoid](xs: List[T]): T =
   xs.foldLeft(Monoid[T].unit)(_.combine(_))
 
 
-@main def Typeclasses: Unit =
+@main def Typeclasses(): Unit =
   combineAll(List(1, 2)).tap(println)
   combineAll2(List("a", "b")).tap(println)

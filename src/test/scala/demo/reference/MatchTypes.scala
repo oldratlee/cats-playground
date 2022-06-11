@@ -26,7 +26,7 @@ type Concat[Xs <: Tuple, +Ys <: Tuple] <: Tuple = Xs match
   case x *: xs => x *: Concat[xs, Ys]
 
 
-@main def MatchTypes: Unit =
+@main def MatchTypes(): Unit =
   val s: Elem[String] = "abc".head
   s.tap(println)
 
@@ -38,7 +38,7 @@ def leafElem[X](x: X): LeafElem[X] = x match
   case x: AnyVal => x
 
 
-@main def DependentTyping: Unit =
+@main def DependentTyping(): Unit =
   leafElem("abc").tap(println)
   leafElem(Array(0, 1, 2, 3)).tap(println)
   leafElem(Vector(false, true, false)).tap(println)
@@ -50,7 +50,7 @@ type L[X] = X match
 def g[X]: L[X] = ???
 
 
-@main def Termination: Unit = {
+@main def Termination(): Unit = {
   // val x: Int = g[Int]
 
   // Compile Error:

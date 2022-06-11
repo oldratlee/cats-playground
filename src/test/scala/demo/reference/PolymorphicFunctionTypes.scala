@@ -27,7 +27,7 @@ def mapSubExpressions[A](e: Expr[A])(f: [B] => Expr[B] => Expr[B]): Expr[A] =
     case Var(n) => Var(n)
 
 
-@main def PolymorphicFuncstionTypes: Unit =
+@main def PolymorphicFunctionTypes(): Unit =
   import Expr.{Apply, Var}
 
   val e0 = Apply(Var("f"), Var("a"))

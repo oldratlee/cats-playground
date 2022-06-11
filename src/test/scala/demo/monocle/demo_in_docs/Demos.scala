@@ -25,7 +25,7 @@ package homepage:
    * - home page https://www.optics.dev/Monocle/
    */
   @main
-  def HelloWorld: Unit =
+  def HelloWorld(): Unit =
     val user = User("Anna", Address(12, "high street"))
 
     user.focus(_.name).replace("Bob")
@@ -52,7 +52,7 @@ package update_optional_field:
    * GET STARTED https://www.optics.dev/Monocle/docs/focus
    */
   @main
-  def UpdateOptionalField: Unit =
+  def UpdateOptionalField(): Unit =
     val anna = User("Anna", Some(Address(12, "high street")))
     val bob = User("bob", None)
 
@@ -87,7 +87,7 @@ package update_single_element_inside_a_list:
    * GET STARTED https://www.optics.dev/Monocle/docs/focus
    */
   @main
-  def UpdateSingleElementInsideAList: Unit =
+  def UpdateSingleElementInsideAList(): Unit =
     val anna = User(
       "Anna",
       List(

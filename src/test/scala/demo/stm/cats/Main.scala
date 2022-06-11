@@ -10,7 +10,7 @@ import scala.concurrent.duration.DurationInt
  */
 object Main extends IOApp.Simple {
 
-  override def run: IO[Unit] = STM.runtime[IO].flatMap(run(_))
+  override def run: IO[Unit] = STM.runtime[IO].flatMap(run)
 
   def run(stm: STM[IO]): IO[Unit] = {
     import stm.*
