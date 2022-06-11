@@ -1,14 +1,14 @@
-val scala3Version = "3.1.1-RC1"
+val scala3Version = "3.1.3-RC5"
 
-val catsVersion = "2.6.1"
-val catsEffectVersion = "3.2.9"
+val catsVersion = "2.7.0"
+val catsEffectVersion = "3.3.12"
 val catsMtlVersion = "1.2.1"
 
-val shapeless3Version = "3.0.3"
+val shapeless3Version = "3.1.0"
 
-val zioVersion = "1.0.12"
-val fs2Version = "3.1.6"
-val http4sVersion = "1.0.0-M29"
+val zioVersion = "1.0.15"
+val fs2Version = "3.2.7"
+val http4sVersion = "1.0.0-M33"
 
 lazy val root = project
   .in(file("."))
@@ -63,7 +63,7 @@ lazy val root = project
       // a small companion to the Cats functional programming library for Scala,
       // includes convenience extension methods for Scala standard library classes
       //   https://github.com/typelevel/mouse
-      "org.typelevel" %% "mouse" % "1.0.6",
+      "org.typelevel" %% "mouse" % "1.0.11",
 
       // shapeless
       // a type class and dependent type based generic programming library for Scala
@@ -73,7 +73,7 @@ lazy val root = project
       // Spire: Numerics library
       // a numeric library for Scala which is intended to be generic, fast, and precise
       //   https://github.com/typelevel/spire
-      "org.typelevel" %% "spire" % "0.18.0-M1",
+      "org.typelevel" %% "spire" % "0.18.0-M3",
       // squants
       // The Scala API for Quantities, Units of Measure and Dimensional Analysis
       //   https://github.com/typelevel/squants
@@ -109,7 +109,7 @@ lazy val root = project
       "dev.zio" %% "zio" % zioVersion,
       "dev.zio" %% "zio-streams" % zioVersion,
       // https://github.com/zio/interop-cats
-      "dev.zio" %% "zio-interop-cats" % "3.1.1.0",
+      "dev.zio" %% "zio-interop-cats" % "3.2.9.1",
 
       /*
        * STM
@@ -117,7 +117,7 @@ lazy val root = project
       // Cats STM: Software transactional memory for Cats Effect
       //   https://timwspence.github.io/cats-stm/
       //   https://github.com/TimWSpence/cats-stm
-      "io.github.timwspence" %% "cats-stm" % "0.11.0",
+      "io.github.timwspence" %% "cats-stm" % "0.13.1",
       // ZIO STM
       //   https://zio.dev/datatypes/stm/stm
       // Scala STM
@@ -133,8 +133,9 @@ lazy val root = project
       /*
        * test libs
        */
-      "org.scalatest" %% "scalatest" % "3.2.10" % Test,
-      "org.scalacheck" %% "scalacheck" % "1.15.4" % Test,
+      "org.scalatest" %% "scalatest" % "3.2.12" % Test,
+      "org.scalacheck" %% "scalacheck" % "1.16.0" % Test,
+      "junit" % "junit" % "4.13.2" % Test,
       "com.novocode" % "junit-interface" % "0.11" % Test,
     )
   )
