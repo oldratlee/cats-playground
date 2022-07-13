@@ -1,14 +1,14 @@
-val scala3Version = "3.1.3-RC5"
+val scala3Version = "3.1.3"
 
-val catsVersion = "2.7.0"
-val catsEffectVersion = "3.3.12"
-val catsMtlVersion = "1.2.1"
+val catsVersion = "2.8.0"
+val catsEffectVersion = "3.3.13"
+val catsMtlVersion = "1.3.0"
 
 val shapeless3Version = "3.1.0"
 
-val zioVersion = "1.0.15"
-val fs2Version = "3.2.7"
-val http4sVersion = "1.0.0-M33"
+val zioVersion = "2.0.0"
+val fs2Version = "3.2.10"
+val http4sVersion = "1.0.0-M34"
 
 lazy val root = project
   .in(file("."))
@@ -63,7 +63,7 @@ lazy val root = project
       // a small companion to the Cats functional programming library for Scala,
       // includes convenience extension methods for Scala standard library classes
       //   https://github.com/typelevel/mouse
-      "org.typelevel" %% "mouse" % "1.0.11",
+      "org.typelevel" %% "mouse" % "1.1.0",
 
       // shapeless
       // a type class and dependent type based generic programming library for Scala
@@ -73,7 +73,7 @@ lazy val root = project
       // Spire: Numerics library
       // a numeric library for Scala which is intended to be generic, fast, and precise
       //   https://github.com/typelevel/spire
-      "org.typelevel" %% "spire" % "0.18.0-M3",
+      "org.typelevel" %% "spire" % "0.18.0",
       // squants
       // The Scala API for Quantities, Units of Measure and Dimensional Analysis
       //   https://github.com/typelevel/squants
