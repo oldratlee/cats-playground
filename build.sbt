@@ -1,14 +1,14 @@
-val scala3Version = "3.5.1"
+val scala3Version = "3.7.3"
 
-val catsVersion = "2.12.0"
-val catsEffectVersion = "3.5.4"
-val catsMtlVersion = "1.5.0"
+val catsVersion = "2.13.0"
+val catsEffectVersion = "3.6.3"
+val catsMtlVersion = "1.6.0"
 
-val shapeless3Version = "3.4.3"
+val shapeless3Version = "3.5.0"
 
-val zioVersion = "2.1.9"
-val fs2Version = "3.11.0"
-val http4sVersion = "0.23.28"
+val zioVersion = "2.1.21"
+val fs2Version = "3.12.2"
+val http4sVersion = "0.23.30"
 
 lazy val root = project.in(file(".")).settings(
   name := "scala-playground",
@@ -53,7 +53,7 @@ lazy val root = project.in(file(".")).settings(
     "org.typelevel" %% "cats-effect" % catsEffectVersion,
     "org.typelevel" %% "cats-effect-testkit" % catsEffectVersion % Test,
     // cats-mtl
-    // provides transformer typeclasses for cats' Monads, Applicatives and Functors
+    // provides transformer type-classes for cats' Monads, Applicatives and Functors
     //   https://github.com/typelevel/cats-mtl
     "org.typelevel" %% "cats-mtl" % catsMtlVersion,
     "org.typelevel" %% "cats-mtl-laws" % catsMtlVersion % Test,
@@ -107,7 +107,7 @@ lazy val root = project.in(file(".")).settings(
     "dev.zio" %% "zio" % zioVersion,
     "dev.zio" %% "zio-streams" % zioVersion,
     // https://github.com/zio/interop-cats
-    "dev.zio" %% "zio-interop-cats" % "23.1.0.3",
+    "dev.zio" %% "zio-interop-cats" % "23.1.0.5",
 
     /*
      * STM
@@ -132,7 +132,7 @@ lazy val root = project.in(file(".")).settings(
      * test libs
      */
     "org.scalatest" %% "scalatest" % "3.2.19" % Test,
-    "org.scalacheck" %% "scalacheck" % "1.18.0" % Test,
+    "org.scalacheck" %% "scalacheck" % "1.19.0" % Test,
     "junit" % "junit" % "4.13.2" % Test,
     "com.github.sbt" % "junit-interface" % "0.13.3" % Test,
   )
